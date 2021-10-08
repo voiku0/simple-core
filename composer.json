@@ -1,0 +1,13 @@
+{
+    "name": "voiku/simple-core",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tudor Voicu Bradu",
+            "email": "tvbradu@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
