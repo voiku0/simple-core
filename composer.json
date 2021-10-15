@@ -8,6 +8,11 @@
             "email": "tvbradu@gmail.com"
         }
     ],
+    "version": "0.0.1-dev",
+    "dist": {
+        "url": "git@github.com:voiku0/simpleCore.git",
+        "type": "vcs"
+    },
     "minimum-stability": "dev",
     "require": {
         "php": ">=8.0",
