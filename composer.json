@@ -1,5 +1,5 @@
 {
-    "name": "voiku/simpleCore",
+    "name": "voiku/simple-core",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -8,15 +8,25 @@
             "email": "tvbradu@gmail.com"
         }
     ],
-    "version": "0.0.1-dev",
+    "version": "dev-0.0.1",
     "dist": {
         "url": "git@github.com:voiku0/simpleCore.git",
         "type": "vcs"
     },
     "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "SimpleCore\\": "SimpleCore"
+        }
+    },
     "require": {
-        "php": ">=8.0",
+        "php": ">=7.4",
         "ext-http": "*",
         "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "ext-dom": "*",
+        "ext-mbstring": "*"
     }
 }

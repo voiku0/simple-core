@@ -2,11 +2,13 @@
 
 namespace SimpleCore\Log;
 
+use SimpleCore\Log\Exceptions\InvalidTimerUsage;
+
 abstract class TimerAbstract implements TimerInterface
 {
   protected string $name = '';
-  private float $time = 0;
-  private float $start = 0;
+  private int $time = 0;
+  private int $start = 0;
 
   public function getName(): string
   {
@@ -15,15 +17,21 @@ abstract class TimerAbstract implements TimerInterface
 
   public function startTime(): void
   {
-    $this->start = microtime(true);
+    $this->start = hrtime(true);
   }
 
+  /**
+   * @throws InvalidTimerUsage
+   */
   public function addTime(): void
   {
-    $this->time = microtime(true) - $this->start;
+    if ($this->start === 0) {
+      throw new InvalidTimerUsage();
+    }
+    $this->time = hrtime(true) - $this->start;
   }
 
-  public function getTime(): float
+  public function getTime(): int
   {
     return $this->time;
   }

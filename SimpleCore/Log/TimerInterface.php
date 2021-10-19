@@ -10,5 +10,5 @@ interface TimerInterface
 
   public function addTime(): void;
 
-  public function getTime(): float;
+  public function getTime(): int;
 }
